@@ -157,6 +157,123 @@ Algorithms that find patterns without labeled data.
   - Useful for visualization of complex datasets.
 
 ---
+## 📊 Model Evaluation Metrics
+
+Evaluating machine learning models is essential to understand how well they generalize to unseen data.  
+Below are common evaluation metrics grouped by problem type.
+
+---
+
+### **1. Regression Metrics**
+
+#### **Mean Absolute Error (MAE)**
+Measures the average magnitude of errors without considering their direction.
+
+`MAE = (1/n) * Σ |yᵢ - ŷᵢ|`
+
+- **Pros**: Easy to interpret, less sensitive to outliers than MSE.  
+- **Cons**: Does not penalize large errors as strongly.
+
+---
+
+#### **Mean Squared Error (MSE)**
+Measures the average of squared differences between actual and predicted values.
+
+`MSE = (1/n) * Σ (yᵢ - ŷᵢ)²`
+
+- **Pros**: Penalizes large errors more than MAE.  
+- **Cons**: Sensitive to outliers.
+
+---
+
+#### **Root Mean Squared Error (RMSE)**
+Square root of MSE, bringing it back to the same units as the target variable.
+
+`RMSE = √( (1/n) * Σ (yᵢ - ŷᵢ)² )`
+
+- **Pros**: More interpretable than MSE.  
+- **Cons**: Same sensitivity to outliers as MSE.
+
+---
+
+#### **R² Score (Coefficient of Determination)**
+Measures the proportion of variance in the dependent variable explained by the model.
+
+`R² = 1 - [ Σ (yᵢ - ŷᵢ)² / Σ (yᵢ - ȳ)² ]`
+
+- **Range**: 0 to 1 (Higher is better, negative means worse than a horizontal line).  
+- **Pros**: Gives a percentage interpretation.  
+- **Cons**: Can be misleading for non-linear models.
+
+---
+
+### **2. Classification Metrics**
+
+#### **Accuracy**
+The proportion of correct predictions out of total predictions.
+
+`Accuracy = (TP + TN) / (TP + TN + FP + FN)`
+
+---
+
+#### **Precision**
+Measures the percentage of positive predictions that are actually correct.
+
+`Precision = TP / (TP + FP)`
+
+---
+
+#### **Recall (Sensitivity or True Positive Rate)**
+Measures the percentage of actual positives correctly identified.
+
+`Recall = TP / (TP + FN)`
+
+---
+
+#### **F1 Score**
+Harmonic mean of Precision and Recall.
+
+`F1 = 2 * (Precision * Recall) / (Precision + Recall)`
+
+---
+
+#### **ROC-AUC (Area Under the Receiver Operating Characteristic Curve)**
+- **ROC Curve**: Plots True Positive Rate vs. False Positive Rate at different thresholds.  
+- **AUC**: Measures the overall ability of the model to discriminate between classes.  
+- **Range**: 0 to 1 (Higher is better).
+
+---
+
+### **3. Clustering Metrics**
+
+#### **Silhouette Score**
+Measures how similar an object is to its own cluster compared to other clusters.
+
+`s = (b - a) / max(a, b)`  
+
+Where:  
+- `a` = mean intra-cluster distance  
+- `b` = mean nearest-cluster distance  
+
+---
+
+#### **Davies–Bouldin Index**
+Measures the average similarity between each cluster and its most similar cluster.
+
+`DB = (1/n) * Σ maxⱼ≠ᵢ [ (σᵢ + σⱼ) / d(cᵢ, cⱼ) ]`  
+
+Where:  
+- `σ` = average distance between points in a cluster and the cluster centroid  
+- `d(cᵢ, cⱼ)` = distance between cluster centroids  
+
+Lower DB index means better clustering.
+
+---
+
+✅ **Tip**: Always choose the metric based on the problem type and business goal. For example:  
+- Regression → MAE, RMSE, R²  
+- Classification → F1, Precision-Recall, ROC-AUC  
+- Clustering → Silhouette, Davies–Bouldin
 
 ## 📌 Conclusion
 
