@@ -4,7 +4,24 @@ This repository serves as a collection of my work and learning in machine learni
 including algorithm explanations, data preprocessing workflows, and two projects.
 
 ---
+## Table of Contents
+- [🛠 General Workflow](#-general-workflow)
+  - [1️⃣ Exploratory Data Analysis (EDA)](#️-exploratory-data-analysis-eda)
+  - [2️⃣ Data Preprocessing](#️-data-preprocessing)
+- [📚 Machine Learning Algorithms](#-machine-learning-algorithms)
+  - [II. Supervised Learning](#ii-supervised-learning)
+  - [II. Unsupervised Learning](#ii-unsupervised-learning)
+  - [III. Dimensionality Reduction](#iii-dimensionality-reduction)
+- [📊 Model Evaluation Metrics](#-model-evaluation-metrics)
+  - [1. Regression Metrics](#1-regression-metrics)
+  - [2. Classification Metrics](#2-classification-metrics)
+  - [3. Clustering Metrics](#3-clustering-metrics)
+- [Projects](#projects)
+  - [Project 1: Hotel Booking Cancellation Prediction](#project-1-hotel-booking-cancellation-prediction)
+  - [Project 2: NYC Taxi Fare Prediction](#project-2-nyc-taxi-fare-prediction)
+- [📌 Conclusion](#-conclusion)
 
+Note: The supervised learning section is incorrectly numbered as "II" instead of "I". This should be fixed.
 
 ## 🛠 General Workflow
 
@@ -274,6 +291,19 @@ Lower DB index means better clustering.
 - Regression → MAE, RMSE, R²  
 - Classification → F1, Precision-Recall, ROC-AUC  
 - Clustering → Silhouette, Davies–Bouldin
+
+
+## Projects
+
+### [Project 1: Hotel Booking Cancellation Prediction](/Project_1/README.ipynb)
+
+  <p align="center">
+  <img src="images/Project_1.gif">
+
+### [Project 2: NYC Taxi Fare Prediction](/Project_2/README.ipynb)
+
+  <p align="center">
+  <img src="images/Project_2.gif">
 
 ## 📌 Conclusion
 
